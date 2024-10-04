@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.state-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.state-image {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px;
+    object-fit: cover; /* Ensures the image is correctly scaled */
+    border-radius: 10px;
+}
+
+.state-name {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.custom-div-icon {
+    background-color: transparent;
+    border: none;
+}
+
+.leaflet-popup-content-wrapper {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+}

@@ -1,0 +1,13 @@
+.chatbotButton{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    border: 0;
+    border-radius: 100px;
+    background-color: brown;
+    height: 4rem;
+    width: 4rem;
+}
+.chatbotButton:hover{
+    background-color: rgb(117, 28, 28);
+}

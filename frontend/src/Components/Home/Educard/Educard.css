@@ -1,0 +1,59 @@
+.educard-section {
+    padding: 20px;
+}
+
+.edu-text {
+    text-align: center;
+}
+
+.separator {
+    margin: 10px auto;
+    width: 50px;
+    border: 1px solid #ddd;
+}
+
+.educard-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 370px;
+    width: 250px !important;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-right: 20px;
+    /* Adds space between cards */
+}
+
+.card:last-child {
+    margin-right: 0;
+    /* Removes margin for the last card */
+}
+
+.card-image img {
+    width: 100%;
+    height: 200px;
+    /* Set a fixed height for images */
+    object-fit: cover;
+    /* Ensures images cover the area without distortion */
+}
+
+.card-content {
+    padding: 10px;
+    flex: 1;
+}
+
+.card-image img {
+    height: 200px !important;
+    width: 100%;
+    margin-bottom: 10px;
+}
