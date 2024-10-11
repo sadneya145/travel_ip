@@ -20,7 +20,7 @@ const touristData = [
                     {
                         name: 'Taj Mahal Palace',
                         latLng: [18.9215, 72.8338],
-                        iconUrl: 'https://img.icons8.com/?size=100&id=RIR3Tr8KjPxt&format=png',
+                        iconUrl: 'https://img.icons8.com/?size=100&id=74CHXrw7kLSv&format=png&color=000000',
                         info: 'Luxury hotel with stunning views of the Gateway of India.',
                         link: 'https://www.tajhotels.com/en-in/taj/taj-mahal-palace-mumbai/',
                         type: 'hotel'
@@ -28,7 +28,7 @@ const touristData = [
                     {
                         name: 'Phoenix Marketcity',
                         latLng: [19.1080, 72.8950],
-                        iconUrl: 'https://img.icons8.com/?size=100&id=7xfD4hRZ3mpX&format=png',
+                        iconUrl: 'https://img.icons8.com/?size=100&id=BB1qFKB8poFR&format=png&color=000000',
                         info: 'A large shopping mall with a variety of shops.',
                         link: 'https://www.phoenixmarketcity.com/mumbai/',
                         type: 'shopping'
@@ -36,7 +36,7 @@ const touristData = [
                     {
                         name: 'Marine Drive',
                         latLng: [18.9520, 72.8258],
-                        iconUrl: 'https://img.icons8.com/?size=100&id=HCcMNfRy8sde&format=png',
+                        iconUrl: 'https://img.icons8.com/?size=100&id=58977&format=png&color=000000',
                         info: 'Famous promenade and tourist attraction.',
                         link: 'https://en.wikipedia.org/wiki/Marine_Drive',
                         type: 'touristPlace'
@@ -44,7 +44,7 @@ const touristData = [
                     {
                         name: 'Leopold Cafe',
                         latLng: [18.9210, 72.8358],
-                        iconUrl: 'https://img.icons8.com/?size=100&id=2pE0lXZv7MkZ&format=png',
+                        iconUrl: 'https://img.icons8.com/?size=100&id=115630&format=png&color=000000',
                         info: 'Popular restaurant and tourist destination.',
                         link: 'https://www.leopoldcafe.com/',
                         type: 'food'

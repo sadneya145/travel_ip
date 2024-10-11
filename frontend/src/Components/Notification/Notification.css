@@ -1,0 +1,40 @@
+.addspace {
+  padding: 20px;
+}
+
+.notification-list .card {
+  transition: transform 0.2s ease;
+  border-radius: 10px;
+  width: 600px !important;
+  padding: 100px;
+  font-size: 21px;
+}
+
+.notification-list .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.notification-header {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.icon-container {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.icon-style {
+  font-size: 1.5rem;
+}
+
+.toast-header {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.toast-body {
+  font-size: 14px;
+}

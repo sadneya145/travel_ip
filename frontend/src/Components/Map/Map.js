@@ -4,6 +4,8 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import './Map.css';
 import touristData from './TouristData'; // Import tourist data
+import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
 // Simulate a socket connection (replace with your server URL)
 const socket = io();
@@ -37,15 +39,24 @@ const Map = () => {
 
             touristData.forEach((state) => {
                 const stateMarker = L.marker(state.latLng, { icon: stateIcon }).addTo(mapInstance);
-                stateMarker.bindPopup(/* ... existing popup code */);
-    
+                
+                // Create popup content for state data
+                const popupContent = `
+                    <b>${state.name}</b><br/>
+                    Famous Location: ${state.details.famousLocation}<br/>
+                    Festival: ${state.details.festival}<br/>
+                    Fun Fact: ${state.details.funFact}<br/>
+                    <a href="${state.details.link}" target="_blank">More Info</a>
+                `;
+                stateMarker.bindPopup(popupContent);
+
                 // Add a click event listener to show tourist spots
                 stateMarker.on('click', () => {
                     mapInstance.setView(state.latLng, 7); // Zoom in on state
-    
+
                     // Clear existing markers
                     Object.values(touristMarkers).forEach((marker) => mapInstance.removeLayer(marker));
-    
+
                     // Add city markers
                     state.cities.forEach((city) => {
                         const customIcon = L.icon({
@@ -55,15 +66,16 @@ const Map = () => {
                         });
                         const cityMarker = L.marker(city.latLng, { icon: customIcon }).addTo(mapInstance);
                         cityMarker.bindPopup(`<b>${city.name}</b><br/>${city.info}<br/><a href="${city.link}" target="_blank">More Info</a>`);
-    
+
                         // City marker click event
-                        cityMarker.on('click', () => {
+                        cityMarker.on('click', (e) => {
+                            e.stopPropagation(); // Prevent the state marker popup from closing
                             mapInstance.setView(city.latLng, 11); // Zoom in on city
-    
+
                             // Clear existing tourist markers
                             Object.values(touristMarkers).forEach((marker) => mapInstance.removeLayer(marker));
                             const newTouristMarkers = {}; // Store new markers based on filters
-    
+
                             city.touristSpots.forEach((spot) => {
                                 // Check if the tourist spot matches any selected filters
                                 if ((filters.hotels && spot.type === 'hotel') || 
@@ -76,11 +88,11 @@ const Map = () => {
                                         iconSize: [20, 20],
                                         iconAnchor: [10, 20], // Adjust anchor to fit the icon
                                     });
-    
+
                                     // Create and add the tourist marker
                                     const touristMarker = L.marker(spot.latLng, { icon: customIcon }).addTo(mapInstance);
                                     newTouristMarkers[spot.name] = touristMarker; // Save marker for cleanup
-    
+
                                     touristMarker.bindPopup(
                                         `<b>${spot.name}</b><br/>${spot.info}<br/><a href="${spot.link}" target="_blank">More Info</a>`
                                     );
@@ -91,7 +103,7 @@ const Map = () => {
                     });
                 });
             });
-    
+
             setMapInstance(mapInstance);
             
             // Cleanup function
@@ -110,6 +122,7 @@ const Map = () => {
 
     return (
         <div>
+            <Navbar/>
             <div className="filters">
                 <label>
                     <input type="checkbox" name="hotels" checked={filters.hotels} onChange={handleFilterChange} />
@@ -129,6 +142,7 @@ const Map = () => {
                 </label>
             </div>
             <div id="map" ref={mapRef} style={{ width: '100%', height: '100vh' }} />
+            <Footer/>
         </div>
     );
 };

@@ -17,6 +17,7 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     padding: 10px 0;
+    margin-left: 260px;
     scroll-snap-type: x mandatory;
 }
 

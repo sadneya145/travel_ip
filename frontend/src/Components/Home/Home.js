@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './Home.css'
 import Header from '../Navbar/Navbar'
-import Footer from '../Footer/Footer'
+import Footer from '../Footer/Footer.js'
 import Corousel from '../Home/Carousel'
 import Cards from '../Home/Card'
 import Chatbot from '../Chatbot/Chatbot'

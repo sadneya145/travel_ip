@@ -14,17 +14,24 @@ import {
 
 // Define a list of keywords related to Indian culture and heritage
 const keywords = [
-  "Red Fort", "Taj Mahal", "historical sites in India", "Indian culture",
-  "Indian heritage", "India", "historical places", "Qutub Minar", 
-  "Humayun's Tomb", "Indian history", "Indian monuments", "Indian architecture",
-  "Ganges River", "Varanasi", "Rajasthan forts", "Mughal Empire", "Indian art",
-  "Indian festivals", "Indian traditions", "Indian temples", "Sikhism", 
-  "Hinduism", "Buddhism", "Jainism", "Indian independence", "Mahatma Gandhi", 
-  "British Raj", "India's freedom struggle", "Indian languages", "Indian music",
-  "Indian dance", "Bollywood", "Indian cuisine", "Indian textiles", "Indian crafts",
-  "Ancient India", "Vedic period", "Indian epics", "Ramayana", "Mahabharata",
-  "Indian archaeology", "Indian museums", "Indian cultural heritage", "Indian sculptures"
+  "travel destinations", "adventure travel", "budget travel", "luxury travel", 
+  "solo travel", "family vacation", "beach destinations", "mountain retreats", 
+  "city breaks", "cultural travel", "travel tips", "road trips", "travel guides", 
+  "eco-tourism", "sustainable travel", "backpacking", "digital nomad", 
+  "travel photography", "best places to visit", "hidden gems", "local experiences", 
+  "travel itineraries", "long-term travel", "weekend getaways", "honeymoon destinations", 
+  "island hopping", "world travel", "travel inspiration", "travel safety", 
+  "travel apps", "travel hacks", "adventure sports", "hiking trails", "national parks", 
+  "wildlife safaris", "cultural festivals", "cruise vacations", "desert adventures", 
+  "snowboarding", "ski resorts", "travel blogs", "travel vlogs", "city tours", 
+  "UNESCO World Heritage Sites", "road trip essentials", "packing lists", "traveler reviews", 
+  "beach resorts", "historical tours", "urban exploration", "remote work travel", 
+  "local cuisine", "culinary tours", "travel deals", "flight booking", 
+  "accommodation options", "hostels", "vacation rentals", "boutique hotels", 
+  "airbnb stays", "campsites", "glamping", "travel insurance", "off-the-beaten-path", 
+  "cultural immersion", "world wonders", "adventure tours", "river cruises"
 ];
+
 
 
 const isCulturalMessage = (message) => {
@@ -36,7 +43,7 @@ export default function Chatbot(props) {
   const [typing, setTyping] = useState(false);
   const [messages, setMessages] = useState([
     {
-      message: "Hello, I am Narada",
+      message: "Hello, I am Trivibot",
       sender: "ChatGPT",
       direction: "incoming",
     },
